@@ -18,6 +18,7 @@
     --default-mono-font-family: var(--font-mono);
     --font-main: Inter, sans-serif;
     --text-h1-2xl: 4.75rem;
+    --text-h2-2xl: 4rem;
     --color-white: #ffffff;
     --color-stroke: #EEEDEB;
     --color-purple: #580CE4;
@@ -28,9 +29,11 @@
     --spacing-1xs: 12px;
     --spacing-3xs: 16px;
     --spacing-sm: 20px;
+    --spacing-2sm: 32px;
     --spacing-lg: 64px;
     --spacing-xl: 88px;
     --spacing-2xl: 98px;
+    --spacing-3xl: 135px;
   }
 }
 @layer base {
@@ -185,6 +188,12 @@
   .relative {
     position: relative;
   }
+  .order-1 {
+    order: 1;
+  }
+  .order-2 {
+    order: 2;
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -193,6 +202,9 @@
   }
   .flex {
     display: flex;
+  }
+  .grid {
+    display: grid;
   }
   .inline-block {
     display: inline-block;
@@ -219,6 +231,12 @@
   .h-\[30px\] {
     height: 30px;
   }
+  .h-\[300px\] {
+    height: 300px;
+  }
+  .h-\[620px\] {
+    height: 620px;
+  }
   .h-auto {
     height: auto;
   }
@@ -234,6 +252,18 @@
   .w-auto {
     width: auto;
   }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-full {
+    max-width: 100%;
+  }
+  .grid-cols-\[1fr_1fr_1fr\] {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
   .items-center {
     align-items: center;
   }
@@ -242,6 +272,15 @@
   }
   .gap-\[6px\] {
     gap: 6px;
+  }
+  .gap-\[24px\] {
+    gap: 24px;
+  }
+  .gap-\[46px\] {
+    gap: 46px;
+  }
+  .gap-\[119px\] {
+    gap: 119px;
   }
   .gap-x-\[4px\] {
     column-gap: 4px;
@@ -255,8 +294,31 @@
   .gap-x-\[30px\] {
     column-gap: 30px;
   }
+  .divide-x-\[1\.6px\] {
+    :where(& > :not(:last-child)) {
+      --tw-divide-x-reverse: 0;
+      border-inline-style: var(--tw-border-style);
+      border-inline-start-width: calc(1.6px * var(--tw-divide-x-reverse));
+      border-inline-end-width: calc(1.6px * calc(1 - var(--tw-divide-x-reverse)));
+    }
+  }
+  .divide-stroke {
+    :where(& > :not(:last-child)) {
+      border-color: var(--color-stroke);
+    }
+  }
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
   .rounded-\[32px\] {
     border-radius: 32px;
+  }
+  .border-t-\[1\.6px\] {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1.6px;
+  }
+  .border-\(--color-stroke\) {
+    border-color: var(--color-stroke);
   }
   .bg-canvas {
     background-color: var(--color-canvas);
@@ -276,11 +338,29 @@
   .px-lg {
     padding-inline: var(--spacing-lg);
   }
+  .py-\(--spacing-2sm\) {
+    padding-block: var(--spacing-2sm);
+  }
+  .py-\[72px\] {
+    padding-block: 72px;
+  }
+  .pt-\(--spacing-3xl\) {
+    padding-top: var(--spacing-3xl);
+  }
   .pt-sm {
     padding-top: var(--spacing-sm);
   }
+  .pr-\(--spacing-2sm\) {
+    padding-right: var(--spacing-2sm);
+  }
+  .pb-\(--spacing-3xl\) {
+    padding-bottom: var(--spacing-3xl);
+  }
   .pb-xs {
     padding-bottom: var(--spacing-xs);
+  }
+  .pl-\(--spacing-lg\) {
+    padding-left: var(--spacing-lg);
   }
   .text-darkgrey {
     color: var(--color-darkgrey);
@@ -375,6 +455,24 @@
   }
   .headline_block {
     width: 830px;
+    padding-right: var(--spacing-sm);
+  }
+  .image_hero {
+    height: 345px;
+    width: 1002px;
+    background-image: url(/asset/img-hero-large.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .body_hero_box {
+    height: auto;
+    width: 35%;
+  }
+  .h2_block {
+    height: auto;
+    width: 1421px;
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-sm);
   }
   h1 {
     font-family: var(--font-main);
@@ -386,6 +484,31 @@
     letter-spacing: -2px;
     color: var(--color-darknight);
   }
+  h2 {
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--text-h2-2xl);
+    --tw-leading: 88px;
+    line-height: 88px;
+    --tw-tracking: -2px;
+    letter-spacing: -2px;
+    color: var(--color-darknight);
+  }
+  p {
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-darkgrey);
+  }
+}
+@property --tw-divide-x-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
@@ -406,6 +529,8 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-divide-x-reverse: 0;
+      --tw-border-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-leading: initial;

@@ -57,6 +57,7 @@ xl  =   desktop sm
     --spacing-2xs: 14px;
     --spacing-3xs: 16px;
     --spacing-sm: 20px;
+    --spacing-2sm: 32px;
     --spacing-md: 56px;
     --spacing-lg: 64px;
     --spacing-xl: 88px;
@@ -152,12 +153,45 @@ xl  =   desktop sm
 
 .headline_block{
     width: 830px;
+    padding-right: var(--spacing-sm);
+}
+
+.image_hero{
+    height: 345px;
+    width: 1002px;
+    background-image: url(/asset/img-hero-large.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.body_hero_box{
+    height: auto;
+    width: 35%;
+}
+
+.h2_block{
+    height: auto;
+    width: 1421px;
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-sm);
 }
 
 h1{
     font-family: var(--font-main);
     font-weight: var(--font-weight-semibold);
     @apply text-darknight text-h1-2xl leading-[96px] tracking-[-2px];
+}
+
+h2{
+    font-family: var(--font-main);
+        font-weight: var(--font-weight-semibold);
+        @apply text-darknight text-h2-2xl leading-[88px] tracking-[-2px];
+}
+
+p{
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-normal);
+    @apply text-darkgrey;
 }
 
 }
