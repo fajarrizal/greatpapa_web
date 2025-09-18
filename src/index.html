@@ -9,7 +9,7 @@
 
 <body class="bg-canvas">
 <header class="nav-header bg-canvas">
-    <div class="mx-auto flex items-center justify-between h-auto px-lg pt-sm pb-xs">
+    <div class="mx-auto flex items-center justify-between h-auto px-lg pt-sm pb-3xs">
         <div class="flex w-auto h-auto gap-x-[30px]">
             <a href="index.html" class="w-[88px]">
             <img src="/asset/Greatpapa_logo_ori.png" alt="logo_img" class="size-full">
@@ -51,7 +51,7 @@
 
                 <a href="index.html" class="btn_primary">
                     <span>Reach me</span>
-                    <div class="p-[8px] rounded-[32px] bg-white">
+                    <div class="p-xs rounded-sm bg-white">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                             class=" size-[18px] text-purple">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -70,8 +70,10 @@
             <div class="headline_block">
                 <h1>Your reliable partner for global shipment</h1>
             </div>
-            <div class="bottom_content_hero flex justify-between py-[72px] gap-[46px]">
-                <div class="image_hero order-1"></div>
+            <div class="bottom_content_hero flex py-[72px] gap-[46px]">
+                <div class="image_hero order-1">
+                    <img src="/asset/img-hero-large.png" alt="img_cargo">
+                </div>
                 <div class="body_hero_box order-2">
                     <p>GreatPapa provide global shipment services for your business, elevate your company revenue value with us, and be number
                     one leading on your sale market.</p>
@@ -106,15 +108,43 @@
     </div>
 
     <div class="relative w-full max-w-full h-auto pb-(--spacing-3xl)">
-        <div class="relative w-full max-w-full">
-            <div class="big_image w-full h-[620px]">
-                <img class="w-full max-w-full" src="/asset/img_section_illustration_lg.jpg" alt="shipment_illustration">
+        <div class="relative w-full max-w-full flex flex-col gap-[119px]">
+            <div class="big_image w-full max-w-full h-[620px]">
+                <img class="size-full" src="/asset/img_section_illustration_lg.jpg" alt="shipment_illustration">
             </div>
-
+            <div class="client_review_container flex items-end px-(--spacing-lg) gap-[46px]">
+                <div class="client_review_box flex gap-[48px]">
+                    <div class="client_avatar">
+                        <img class=" rounded-tr-xl rounded-br-xs rounded-tl-xs" src="/asset/img_client_potrait.jpg" alt="client_potrait">
+                    </div>
+                    <div class="client_name flex flex-col gap-1xs">
+                        <p>Aaron Ricardson <span>,</span> <span>Warehouse Senior Supervisor at Mohawk Industries</span></p>
+                        <h4>“GreatPapa is exceptional, safely manage our cargo and deeply understand our supply chains, Weather in sea or road they
+                        always taking good care your cargo, extraordinary services I would say.“</h4>
+                    </div>
+                </div>
+                <div class="slider_control_box flex gap-3xs h-[60px]">
+                    <a href="index.html" class="btn_icon">
+                        <div class="p-xs rounded-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                class="size-[18px]">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="index.html" class="btn_icon">
+                        <div class="p-xs rounded-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                class=" size-[18px]">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
        
 </main>
 </body>
-
 </html>
