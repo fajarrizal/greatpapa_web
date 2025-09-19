@@ -115,7 +115,7 @@
     height: 100%;
     width: auto;
     border-radius: var(--radius-sm);
-    padding: var(--spacing-1xs);
+    padding: var(--spacing-xs);
     font-size: var(--text-button-all);
     font-family: var(--font-main);
     font-weight: var(--font-weight-normal);
@@ -123,6 +123,25 @@
     border-width: 2.2px;
     border-color: var(--color-darkgrey);
 
+    @apply transition-transform duration-345 ease-out;
+
+    &:hover {
+        @media (hover: hover) {
+            scale: 90%;
+        }
+    }
+}
+
+.btn_tetiary {
+    height: auto;
+    width: fit-content;
+    font-size: var(--text-button-all);
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-darknight);
+    border-bottom-width: 1.6px;
+    border-color: var(--color-darknight);
+    
     @apply transition-transform duration-345 ease-out;
 
     &:hover {
@@ -233,6 +252,51 @@
     width: 85%;
 }
 
+.client_svg{
+    opacity: 65%;
+    @apply transition-opacity duration-345 ease-out;
+    @apply transition-transform duration-345 ease-out;
+    
+        &:hover {
+            @media (hover: hover) {
+                opacity: 100%;
+                scale: 90%;
+            }
+        }
+}
+
+.service_box{
+    height: 272px;
+    width: 100%;
+}
+
+.heading_service{
+    height: auto;
+    width: 30%;
+}
+
+.short_desc_service{
+    height: auto;
+    width: 35%;
+}
+
+.object_img-service{
+    width: 35%;
+    height: 100%;
+}
+
+.faq_heading_body{
+    height: auto;
+    width: 788px;
+    margin: auto;
+}
+
+.faq_accordion{
+    height: auto;
+    width: 1028px;
+    margin: auto;
+}
+
 h1{
     font-family: var(--font-main);
     font-weight: var(--font-weight-semibold);
@@ -243,6 +307,12 @@ h2{
     font-family: var(--font-main);
     font-weight: var(--font-weight-semibold);
      @apply text-darknight text-h2-2xl leading-[88px] tracking-[-2px];
+}
+
+h3{
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-medium);
+    @apply text-darknight text-h3-2xl leading-[47.5px] tracking-[-1px];
 }
 
 h4{

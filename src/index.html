@@ -65,7 +65,7 @@
 
 <main id="main">
 
-    <div class="hero_content relative h-auto">
+    <section class="hero_content relative h-auto">
         <div class="container_hero flex flex-col gap-[24px]">
             <div class="headline_block">
                 <h1>Your reliable partner for global shipment</h1>
@@ -80,34 +80,34 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="mx-auto h-auto pt-(--spacing-3xl)">
+    <section class="mx-auto h-auto pt-(--spacing-3xl)">
         <div class="container_content flex flex-col gap-[119px]">
             <div class="h2_block">
                 <h2>We made for you, from busy ports to distant highways we provide global shipment with deep understanding of supply chains
                 needs.</h2>
             </div>
-            <div class="milestone grid grid-cols-[1fr_1fr_1fr] border-t-[1.6px] divide-x-[1.6px] divide-stroke border-(--color-stroke)">
+            <div id="milestones" class="milestone grid grid-cols-[1fr_1fr_1fr] border-t-[1.6px] divide-x-[1.6px] divide-stroke border-stroke">
                 <div class="card_milestone pl-(--spacing-lg) py-(--spacing-2sm) pr-(--spacing-2sm) flex flex-col justify-between h-[300px]">
-                    <h1>20+</h1>
+                    <h1 class="countup" data-target="20" data-suffix="+">0</h1>
                     <p>More than 20 years of experience in the shipment industry, we help navigate business and earn trust.</p>
                 </div>
                 <div
                     class="card_milestone pl-(--spacing-lg) py-(--spacing-2sm) pr-(--spacing-2sm) flex flex-col justify-between h-[300px]">
-                    <h1>125K+</h1>
+                    <h1 class="countup" data-target="125" data-suffix="K+">0</h1>
                     <p>Record cargo shipment arrives safely, with our consistency and carefully manage the supply chains.</p>
                 </div>
                 <div
                     class="card_milestone pl-(--spacing-lg) py-(--spacing-2sm) pr-(--spacing-2sm) flex flex-col justify-between h-[300px]">
-                    <h1>99.8%</h1>
+                    <h1 class="countup" data-target="99.8" data-decimal="true" data-suffix="%">0</h1>
                     <p>We make sure your cargo safety, with 99.8% we consistent to maintain those rate to earn your trust.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="relative w-full max-w-full h-auto pb-(--spacing-3xl)">
+    <section class="relative w-full max-w-full h-auto pb-(--spacing-3xl)">
         <div class="relative w-full max-w-full flex flex-col gap-[119px]">
             <div class="big_image w-full max-w-full h-[620px]">
                 <img class="size-full" src="/asset/img_section_illustration_lg.jpg" alt="shipment_illustration">
@@ -123,7 +123,7 @@
                         always taking good care your cargo, extraordinary services I would say.“</h4>
                     </div>
                 </div>
-                <div class="slider_control_box flex gap-3xs h-[60px]">
+                <div class="slider_control_box flex gap-3xs h-[50px]">
                     <a href="index.html" class="btn_icon">
                         <div class="p-xs rounded-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -143,8 +143,166 @@
                 </div>
             </div>
         </div>
-    </div>
-       
+    </section>
+
+    <section class="relative w-full max-w-full h-auto py-3xl px-lg">
+        <div class="w-full max-w-full flex flex-col gap-[119px]">
+            <div class="client_brand_container w-full h-auto grid grid-cols-5 ">
+                <div class="client_brand_box size-full py-sm px-lg">
+                    <img class="client_svg mx-auto" src="/asset/client.svg" alt="client">
+                </div>
+                <div class="client_brand_box size-auto py-sm px-lg">
+                    <img class="client_svg mx-auto" src="/asset/client-1.svg" alt="client">
+                </div>
+                <div class="client_brand_box size-auto py-sm px-lg">
+                    <img class="client_svg mx-auto" src="/asset/client-2.svg" alt="client">
+                </div>
+                <div class="client_brand_box size-auto py-sm px-lg">
+                    <img class="client_svg mx-auto" src="/asset/client-3.svg" alt="client">
+                </div>
+                <div class="client_brand_box size-auto py-sm px-lg">
+                    <img class="client_svg mx-auto" src="/asset/client-4.svg" alt="client">
+                </div>
+                <div class="client_brand_box size-auto py-sm px-lg">
+                    <img class="client_svg mx-auto" src="/asset/client-5.svg" alt="client">
+                </div>
+                <div class="client_brand_box size-auto py-sm px-lg">
+                    <img class="client_svg mx-auto" src="/asset/client-6.svg" alt="client">
+                </div>
+                <div class="client_brand_box size-auto py-sm px-lg">
+                    <img class="client_svg mx-auto" src="/asset/client-7.svg" alt="client">
+                </div>
+                <div class="client_brand_box size-auto py-sm px-lg">
+                    <img class="client_svg mx-auto" src="/asset/client-8.svg" alt="client">
+                </div>
+                <div class="client_brand_box size-auto py-sm px-lg">
+                    <img class="client_svg mx-auto" src="/asset/client-9.svg" alt="client">
+                </div>
+            </div>
+            <div class="bottom_content_client flex items-end gap-[46px]">
+                <div class="client_heading2">
+                    <h2>Trusted by big client, lets work together</h2>
+                </div>
+                <div class="body_client_box">
+                    <p>GreatPapa has done many successful shipment to many big client, we excited waiting you to using our services. Lets work
+                    together and make it impossible to possible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative w-full max-w-full h-auto py-3xl px-lg">
+        <div class="w-full max-w-full flex flex-col gap-md">
+            <div class="service_box flex flex-row gap-[46px] justify-between pb-2sm border-b-2 border-b-stroke">
+                <div class="heading_service">
+                    <h3>Sea Freight</h3>
+                </div>
+                <div class="short_desc_service flex flex-col gap-3xs">
+                    <p>From fully container loads to less container loads, we optimize sea freight to suit your business requirements and make
+                    sure the security of your container.</p>
+                    <a href="index.html" class="btn_tetiary">Learn more</a>
+                </div>
+                <div class="object_img-service">
+                    <img class="rounded-sm size-full" src="/asset/img_services_1.jpg" alt="service_img">
+                </div>
+            </div>
+            <div class="service_box flex flex-row gap-[46px] justify-between pb-2sm border-b-2 border-b-stroke">
+                <div class="heading_service">
+                    <h3>Road Freight</h3>
+                </div>
+                <div class="short_desc_service flex flex-col gap-3xs">
+                    <p>With our experience crew worker, we ensure that your goods reach their destination swiftly and safely. Our truck armada
+                    constantly maintain and ready to be used.</p>
+                    <a href="index.html" class="btn_tetiary">Learn more</a>
+                </div>
+                <div class="object_img-service">
+                    <img class="rounded-sm size-full" src="/asset/img_services_2.jpg" alt="service_img">
+                </div>
+            </div>
+            <div class="service_box flex flex-row gap-[46px] justify-between pb-2sm">
+                <div class="heading_service">
+                    <h3>Container Supplier</h3>
+                </div>
+                <div class="short_desc_service flex flex-col gap-3xs">
+                    <p>Not only global shipment that we provide, we also open to rent or sell our container. With many use of our container, we
+                    believe it can help your business to reach the supply chain that you need.</p>
+                    <a href="index.html" class="btn_tetiary">Learn more</a>
+                </div>
+                <div class="object_img-service">
+                    <img class="rounded-sm size-full" src="/asset/img_services_3.jpg" alt="service_img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative w-full max-w-full h-auto py-3xl px-lg">
+        <div class="w-full max-w-full flex flex-col gap-lg">
+            <div class="faq_heading_body flex flex-col gap-3xs text-center">
+                <h2>These are popular questions and answers</h2>
+                <p>Many new comer ask us about these common question, if there’s no question or answer that we don’t provide, contact us
+                right away and we’ll answer it.</p>
+            </div>
+            <div class="faq_accordion flex flex-col gap-sm">
+                <div class="w-full max-w-full h-auto rounded-sm p-2sm bg-softgrey ">
+                    <div class="w-full h-auto flex justify-between">
+                        <h4>How do I request a shipment?</h4>
+                        <button class="btn_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                class="size-sm">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+                            </svg>
+                        </button>
+                    </div> 
+                    <p class="mt-sm">You can request a shipment through our website, by contacting our customer service team, or visiting our nearest branch
+                    office. Simply provide your shipment details, and we’ll assist you with the booking process.</p>
+                </div>
+                <div class="w-full max-w-full h-auto rounded-sm p-2sm bg-softgrey ">
+                    <div class="w-full h-auto flex justify-between">
+                        <h4>What types of cargo can you handle?</h4>
+                        <button class="btn_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                class="size-sm">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="mt-sm">You can request a shipment through our website, by contacting our customer service team, or
+                        visiting our nearest branch
+                        office. Simply provide your shipment details, and we’ll assist you with the booking process.</p>
+                </div>
+                <div class="w-full max-w-full h-auto rounded-sm p-2sm bg-softgrey ">
+                    <div class="w-full h-auto flex justify-between">
+                        <h4>How do I track my shipment?</h4>
+                        <button class="btn_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                class="size-sm">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="mt-sm">You can request a shipment through our website, by contacting our customer service team, or
+                        visiting our nearest branch
+                        office. Simply provide your shipment details, and we’ll assist you with the booking process.</p>
+                </div>
+                <div class="w-full max-w-full h-auto rounded-sm p-2sm bg-softgrey ">
+                    <div class="w-full h-auto flex justify-between">
+                        <h4>Do you provide cargo insurance?</h4>
+                        <button class="btn_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                class="size-sm">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="mt-sm">You can request a shipment through our website, by contacting our customer service team, or
+                        visiting our nearest branch
+                        office. Simply provide your shipment details, and we’ll assist you with the booking process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
+<script src="animation.js"></script>
 </body>
 </html>
