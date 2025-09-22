@@ -74,15 +74,72 @@
     --spacing-3xs: 16px;
     --spacing-sm: 20px;
     --spacing-2sm: 32px;
+    --spacing-3sm: 48px;
     --spacing-md: 56px;
     --spacing-lg: 64px;
     --spacing-xl: 88px;
     --spacing-2xl: 98px;
-    --spacing-3xl: 135px;
+    --spacing-3xl: 128px;
+    --spacing-4xl: 135px;
     
 }
 
 @layer components {
+
+h1 {
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-semibold);
+    @apply text-darknight;
+}
+
+@media only screen and (max-width: 991px) {
+    
+h1 {
+    @apply text-h1-xs leading-[62px] tracking-[-2px];
+}
+
+}
+
+@media only screen and (min-width: 992px) {
+
+h1 {
+    @apply text-h1-xl leading-[90px] tracking-[-2px];
+}
+
+}
+
+@media only screen and (min-width: 1441px) {
+
+    h1 {
+        @apply text-h1-2xl leading-[96px] tracking-[-2px];
+    }
+
+}
+
+
+h2 {
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-semibold);
+    @apply text-darknight text-h2-2xl leading-[88px] tracking-[-2px];
+}
+
+h3 {
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-medium);
+    @apply text-darknight text-h3-2xl leading-[47.5px] tracking-[-1px];
+}
+
+h4 {
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-medium);
+    @apply text-darknight text-h4-2xl leading-[38.5px] tracking-[-1px];
+}
+
+p {
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-normal);
+    @apply text-darkgrey text-body-2xl leading-[26px];
+}
 
 .btn_primary{
     display: flex;
@@ -196,40 +253,6 @@
     line-height: var(--spacing-3xs);
 }
 
-.hero_content{
-    padding-top: var(--spacing-xl);
-
-}
-
-.container_hero{
-    height: auto;
-    width: 100%;
-    max-width: 100%;
-    padding-inline: var(--spacing-lg);
-    padding-top: var(--spacing-2xl);
-}
-
-.headline_block{
-    width: 830px;
-    padding-right: var(--spacing-sm);
-}
-
-.bottom_content_hero{
-    width: 100%;
-    max-width: 100%;
-    height: 524px;
-}
-
-.image_hero{
-    height: 100%;
-    width: 65%;
-}
-
-.body_hero_box{
-    height: auto;
-    width: 35%;
-}
-
 .h2_block{
     height: auto;
     width: 1421px;
@@ -297,34 +320,6 @@
     margin: auto;
 }
 
-h1{
-    font-family: var(--font-main);
-    font-weight: var(--font-weight-semibold);
-    @apply text-darknight text-h1-2xl leading-[96px] tracking-[-2px];
-}
 
-h2{
-    font-family: var(--font-main);
-    font-weight: var(--font-weight-semibold);
-     @apply text-darknight text-h2-2xl leading-[88px] tracking-[-2px];
-}
-
-h3{
-    font-family: var(--font-main);
-    font-weight: var(--font-weight-medium);
-    @apply text-darknight text-h3-2xl leading-[47.5px] tracking-[-1px];
-}
-
-h4{
-    font-family: var(--font-main);
-    font-weight: var(--font-weight-medium);
-    @apply text-darknight text-h4-2xl leading-[38.5px] tracking-[-1px];
-}
-
-p{
-    font-family: var(--font-main);
-    font-weight: var(--font-weight-normal);
-    @apply text-darkgrey text-body-2xl leading-[26px];
-}
 
 }
