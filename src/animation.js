@@ -35,6 +35,6 @@ if (section) {
             });
             observer.disconnect(); // only animate once
         }
-    }, { threshold: 0.4 });
+    }, { threshold: 0.2 });
     observer.observe(section);
 }

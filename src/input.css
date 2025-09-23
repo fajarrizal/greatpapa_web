@@ -92,10 +92,50 @@ h1 {
     @apply text-darknight;
 }
 
+h2 {
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-semibold);
+    @apply text-darknight;
+}
+
+h3 {
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-medium);
+    @apply text-darknight;
+}
+
+h4 {
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-medium);
+    @apply text-darknight;
+}
+
+p {
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-normal);
+    @apply text-darkgrey;
+}
+
 @media only screen and (max-width: 991px) {
     
 h1 {
     @apply text-h1-xs leading-[62px] tracking-[-2px];
+}
+
+h2 {
+    @apply text-h2-xs leading-[54px] tracking-[-2px];
+}
+
+h3 {
+    @apply text-h3-xs leading-[34.5px] tracking-[-1px];
+}
+
+h4 {
+    @apply text-h4-xs leading-[32px] tracking-[-1px];
+}
+
+p {
+    @apply text-body-xs leading-[23.7px];
 }
 
 }
@@ -106,40 +146,48 @@ h1 {
     @apply text-h1-xl leading-[90px] tracking-[-2px];
 }
 
+h2 {
+    @apply text-h2-xl leading-[74px] tracking-[-2px];
+}
+
+h3 {
+    @apply text-h3-xl leading-[45px] tracking-[-1px];
+}
+
+h4 {
+    @apply text-h4-xl leading-[37px] tracking-[-1px];
+}
+
+p{
+    @apply text-body-xl leading-[24px];
+}
+
 }
 
 @media only screen and (min-width: 1441px) {
 
-    h1 {
-        @apply text-h1-2xl leading-[96px] tracking-[-2px];
-    }
-
+h1 {
+    @apply text-h1-2xl leading-[96px] tracking-[-2px];
 }
 
-
 h2 {
-    font-family: var(--font-main);
-    font-weight: var(--font-weight-semibold);
-    @apply text-darknight text-h2-2xl leading-[88px] tracking-[-2px];
+    @apply text-h2-2xl leading-[88px] tracking-[-2px];
 }
 
 h3 {
-    font-family: var(--font-main);
-    font-weight: var(--font-weight-medium);
-    @apply text-darknight text-h3-2xl leading-[47.5px] tracking-[-1px];
+    @apply text-h3-2xl leading-[47.5px] tracking-[-1px];
 }
 
 h4 {
-    font-family: var(--font-main);
-    font-weight: var(--font-weight-medium);
-    @apply text-darknight text-h4-2xl leading-[38.5px] tracking-[-1px];
+    @apply text-h4-2xl leading-[38.5px] tracking-[-1px];
 }
 
 p {
-    font-family: var(--font-main);
-    font-weight: var(--font-weight-normal);
-    @apply text-darkgrey text-body-2xl leading-[26px];
+    @apply text-body-2xl leading-[26px];
 }
+
+}
+
 
 .btn_primary{
     display: flex;
@@ -251,28 +299,6 @@ p {
     font-weight: var(--font-weight-medium);
     font-size: 14px;
     line-height: var(--spacing-3xs);
-}
-
-.h2_block{
-    height: auto;
-    width: 1421px;
-    padding-left: var(--spacing-lg);
-    padding-right: var(--spacing-sm);
-}
-
-.client_review_box{
-    height: auto;
-    width: 885px;
-}
-
-.client_avatar{
-   height: 100%;
-   width: 15%;
-} 
-
-.client_name{
-    height: auto;
-    width: 85%;
 }
 
 .client_svg{
