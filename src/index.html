@@ -8,15 +8,16 @@
 </head>
 
 <body class="bg-canvas">
-<header class="nav-header bg-canvas">
-    <div class="mx-auto flex items-center justify-between h-auto px-lg pt-sm pb-3xs">
-        <div class="flex w-auto h-auto gap-x-[30px]">
+
+<header id="nav-header" class="sticky top-0 z-50 w-full transition-transform duration-300 bg-canvas">
+    <div class="flex items-center justify-between w-full h-auto px-sm 2xl:px-lg lg:px-md md:px-3sm pt-sm pb-3xs">
+        <div class=" w-3/5 h-auto flex gap-x-[30px]">
             <a href="index.html" class="w-[88px]">
             <img src="/asset/Greatpapa_logo_ori.png" alt="logo_img" class="size-full">
                 </a>
 
-            <nav class="nav_contain">
-                <ul class="nav_menu">
+            <nav id="main_menu" class="absolute lg:static top-[100%] left-0 w-full lg:w-auto bg-canvas lg:bg-transparent shadow-lg lg:shadow-none lg:flex z-40 transition-all duration-300 ease-in-out invisible opacity-0 lg:visible lg:opacity-100">
+                <ul class="flex flex-col h-auto gap-0 px-6 py-3 m-auto lg:flex-row lg:gap-x-2sm lg:p-0">
                     <li><a href="#" class="nav-link active">Home</a></li> 
                     <li><a href="#" class="nav-link">Why us</a></li>
                     <li><a href="#" class="nav-link flex gap-[6px]">Services
@@ -32,7 +33,7 @@
             </nav>
         </div>
         
-        <div class="features flex gap-x-[16px] items-center">
+        <div class="w-2/5 h-auto flex gap-x-[16px] items-center justify-end">
             <div class="multi-lang-box flex gap-x-[4px] items-center">
                 <div class="multi-lang-icon p-[4px]">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -49,32 +50,41 @@
                     </div>
             </div>
 
+            <div class="hidden w-auto h-auto lg:inline-block">
                 <a href="index.html" class="btn_primary">
-                    Reach me
-                    <div class="p-xs rounded-sm bg-white">
+                    Reach us
+                    <div class="bg-white rounded-sm p-xs">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                             class=" size-[18px] text-purple">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>
                     </div>
                 </a>
+            </div>
+                
+                <button id="menu_toggle" class="btn_icon lg:hidden" aria-label="Open main menu" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                        class="size-[18px]">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+                    </svg>
+                </button>
+
         </div>
     </div>
-
 </header>
 
 <main id="main">
 
-    <section class="hero_content w-full max-w-full h-auto pt-xl">
-        <div class="container_hero w-full max-w-full h-auto px-sm pt-md 2xl:px-lg 2xl:pt-2xl lg:px-md lg:pt-xl md:px-3sm md:pt-lg flex flex-col gap-[24px]">
+    <section class="w-full h-auto max-w-full hero_content">
+        <div class="container_hero w-full max-w-full h-auto px-sm 2xl:px-lg lg:px-md md:px-3sm pt-md lg:pt-xl md:pt-lg flex flex-col gap-[24px]">
             <div class="headline_block w-full 2xl:w-[800px] lg:w-[720px] pr-sm">
                 <h1 class="w-full">Your reliable partner for global shipment</h1>
             </div>
             <div class="w-full max-w-full h-auto flex flex-col md:flex-row py-xs gap-[28px] lg:py-lg lg:gap-[46px] md:py-md md:gap-[32px]">
                 <div class="w-full 2xl:w-3/5 lg:w-2/3 h-[270px] 2xl:h-[380px] lg:h-[324px] order-2 xs:order-1 overflow-hidden">
-                    <img class="size-full object-cover xs:object-fill object-left xs:object-center" src="/asset/img-hero-large.png" alt="img_cargo">
+                    <img class="object-cover object-left size-full xs:object-fill xs:object-center" src="/asset/img-hero-large.png" alt="img_cargo">
                 </div>
-                <div class="w-full 2xl:w-2/5 lg:w-1/3 h-auto order-1 xs:order-2">
+                <div class="order-1 w-full h-auto 2xl:w-2/5 lg:w-1/3 xs:order-2">
                     <p>GreatPapa provide global shipment services for your business, elevate your company revenue value with us, and be number
                     one leading on your sale market.</p>
                 </div>
@@ -82,7 +92,7 @@
         </div>
     </section>
 
-    <section class="w-full max-w-full h-auto pt-lg 2xl:pt-4xl lg:pt-3xl">
+    <section class="w-full h-auto max-w-full pt-lg 2xl:pt-4xl lg:pt-3xl">
         <div class="container_content flex flex-col gap-[40px] lg:gap-[119px]">
             <div class="w-full 2xl:w-[1421px] h-auto pl-sm 2xl:pl-lg lg:pl-md md:pl-3sm pr-[18px] xs:pr-sm ">
                 <h2>We made for you, from busy ports to distant highways we provide global shipment with deep understanding of supply chains
@@ -107,17 +117,17 @@
         </div>
     </section>
 
-    <section class="w-full max-w-full h-auto pb-lg 2xl:pb-4xl lg:pb-3xl">
+    <section class="w-full h-auto max-w-full pb-lg 2xl:pb-4xl lg:pb-3xl">
         <div class="w-full h-auto flex flex-col gap-[40px] lg:gap-[119px]">
             <div class="w-full h-[385px] md:h-[425px] lg:h-[560px] 2xl:h-[620px] ">
-                <img class="size-full object-cover xs:object-fill object-right xs:object-center" src="/asset/img_section_illustration_lg.jpg" alt="shipment_illustration">
+                <img class="object-cover object-right size-full xs:object-fill xs:object-center" src="/asset/img_section_illustration_lg.jpg" alt="shipment_illustration">
             </div>
             <div class="w-full h-auto flex flex-col md:flex-row items-end py-xs px-sm 2xl:px-lg lg:px-md md:px-3sm gap-[28px] lg:gap-[46px] md:gap-[32px] ">
-                <div class="2xl:w-3/5 lg:w-2/3 flex flex-col md:flex-row gap-sm xl:gap-3sm md:gap-2sm ">
+                <div class="flex flex-col 2xl:w-3/5 lg:w-2/3 md:flex-row gap-sm xl:gap-3sm md:gap-2sm ">
                     <div class="w-[138px] lg:w-1/5 h-auto lg:h-[160px] 2xl:h-[172px]">
-                        <img class="size-full object-fill rounded-tr-xl rounded-br-xs rounded-tl-xs" src="/asset/img_client_potrait.jpg" alt="client_potrait">
+                        <img class="object-fill size-full rounded-tr-xl rounded-br-xs rounded-tl-xs" src="/asset/img_client_potrait.jpg" alt="client_potrait">
                     </div>
-                    <div class="w-full lg:w-4/5 h-auto flex flex-col gap-1xs">
+                    <div class="flex flex-col w-full h-auto lg:w-4/5 gap-1xs">
                         <p>Aaron Ricardson <span>,</span> <span>Warehouse Senior Supervisor at Mohawk Industries</span></p>
                         <h4>“GreatPapa is exceptional, safely manage our cargo and deeply understand our supply chains, Weather in sea or road they
                         always taking good care your cargo, extraordinary services I would say.“</h4>
@@ -125,7 +135,7 @@
                 </div>
                 <div class="w-full 2xl:w-2/5 lg:w-1/3 flex gap-3xs h-[50px]">
                     <a href="index.html" class="btn_icon">
-                        <div class="p-xs rounded-sm">
+                        <div class="rounded-sm p-xs">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                 class="size-[18px]">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -133,7 +143,7 @@
                         </div>
                     </a>
                     <a href="index.html" class="btn_icon">
-                        <div class="p-xs rounded-sm">
+                        <div class="rounded-sm p-xs">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                 class=" size-[18px]">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -145,38 +155,38 @@
         </div>
     </section>
 
-    <section class="w-full max-w-full h-auto py-lg 2xl:py-4xl lg:py-3xl px-sm 2xl:px-lg lg:px-md md:px-3sm">
+    <section class="w-full h-auto max-w-full py-lg 2xl:py-4xl lg:py-3xl px-sm 2xl:px-lg lg:px-md md:px-3sm">
         <div class="w-full h-auto flex flex-col gap-[119px]">
-            <div class="w-full h-auto grid grid-cols-2 md:grid-cols-5 grid-rows-5 md:grid-rows-2 gap-3 md:gap-0">
+            <div class="grid w-full h-auto grid-cols-2 grid-rows-5 gap-3 md:grid-cols-5 md:grid-rows-2 md:gap-0">
                 <div class="size-full py-1xs md:py-sm px-3xs 2xl:px-lg lg:px-md md:px-3sm">
-                    <img class="client_svg mx-auto" src="/asset/client.svg" alt="client">
+                    <img class="mx-auto client_svg" src="/asset/client.svg" alt="client">
                 </div>
                 <div class="size-full py-1xs md:py-sm px-3xs 2xl:px-lg lg:px-md md:px-3sm">
-                    <img class="client_svg mx-auto" src="/asset/client-1.svg" alt="client">
+                    <img class="mx-auto client_svg" src="/asset/client-1.svg" alt="client">
                 </div>
                 <div class="size-full py-1xs md:py-sm px-3xs 2xl:px-lg lg:px-md md:px-3sm">
-                    <img class="client_svg mx-auto" src="/asset/client-2.svg" alt="client">
+                    <img class="mx-auto client_svg" src="/asset/client-2.svg" alt="client">
                 </div>
                 <div class="size-full py-1xs md:py-sm px-3xs 2xl:px-lg lg:px-md md:px-3sm">
-                    <img class="client_svg mx-auto" src="/asset/client-3.svg" alt="client">
+                    <img class="mx-auto client_svg" src="/asset/client-3.svg" alt="client">
                 </div>
                 <div class="size-full py-1xs md:py-sm px-3xs 2xl:px-lg lg:px-md md:px-3sm">
-                    <img class="client_svg mx-auto" src="/asset/client-4.svg" alt="client">
+                    <img class="mx-auto client_svg" src="/asset/client-4.svg" alt="client">
                 </div>
                 <div class="size-full py-1xs md:py-sm px-3xs 2xl:px-lg lg:px-md md:px-3sm">
-                    <img class="client_svg mx-auto" src="/asset/client-5.svg" alt="client">
+                    <img class="mx-auto client_svg" src="/asset/client-5.svg" alt="client">
                 </div>
                 <div class="size-full py-1xs md:py-sm px-3xs 2xl:px-lg lg:px-md md:px-3sm">
-                    <img class="client_svg mx-auto" src="/asset/client-6.svg" alt="client">
+                    <img class="mx-auto client_svg" src="/asset/client-6.svg" alt="client">
                 </div>
                 <div class="size-full py-1xs md:py-sm px-3xs 2xl:px-lg lg:px-md md:px-3sm">
-                    <img class="client_svg mx-auto" src="/asset/client-7.svg" alt="client">
+                    <img class="mx-auto client_svg" src="/asset/client-7.svg" alt="client">
                 </div>
                 <div class="size-full py-1xs md:py-sm px-3xs 2xl:px-lg lg:px-md md:px-3sm">
-                    <img class="client_svg mx-auto" src="/asset/client-8.svg" alt="client">
+                    <img class="mx-auto client_svg" src="/asset/client-8.svg" alt="client">
                 </div>
                 <div class="size-full py-1xs md:py-sm px-3xs 2xl:px-lg lg:px-md md:px-3sm">
-                    <img class="client_svg mx-auto" src="/asset/client-9.svg" alt="client">
+                    <img class="mx-auto client_svg" src="/asset/client-9.svg" alt="client">
                 </div>
             </div>
             <div class="bottom_content_client flex items-end gap-[46px]">
@@ -191,13 +201,13 @@
         </div>
     </section>
 
-    <section class="relative w-full max-w-full h-auto py-3xl px-lg">
-        <div class="w-full max-w-full flex flex-col gap-md">
+    <section class="relative w-full h-auto max-w-full py-3xl px-lg">
+        <div class="flex flex-col w-full max-w-full gap-md">
             <div class="service_box flex flex-row gap-[46px] justify-between pb-2sm border-b-2 border-b-stroke">
                 <div class="heading_service">
                     <h3>Sea Freight</h3>
                 </div>
-                <div class="short_desc_service flex flex-col gap-3xs">
+                <div class="flex flex-col short_desc_service gap-3xs">
                     <p>From fully container loads to less container loads, we optimize sea freight to suit your business requirements and make
                     sure the security of your container.</p>
                     <a href="index.html" class="btn_tetiary">Learn more</a>
@@ -210,7 +220,7 @@
                 <div class="heading_service">
                     <h3>Road Freight</h3>
                 </div>
-                <div class="short_desc_service flex flex-col gap-3xs">
+                <div class="flex flex-col short_desc_service gap-3xs">
                     <p>With our experience crew worker, we ensure that your goods reach their destination swiftly and safely. Our truck armada
                     constantly maintain and ready to be used.</p>
                     <a href="index.html" class="btn_tetiary">Learn more</a>
@@ -223,7 +233,7 @@
                 <div class="heading_service">
                     <h3>Container Supplier</h3>
                 </div>
-                <div class="short_desc_service flex flex-col gap-3xs">
+                <div class="flex flex-col short_desc_service gap-3xs">
                     <p>Not only global shipment that we provide, we also open to rent or sell our container. With many use of our container, we
                     believe it can help your business to reach the supply chain that you need.</p>
                     <a href="index.html" class="btn_tetiary">Learn more</a>
@@ -235,16 +245,16 @@
         </div>
     </section>
 
-    <section class="relative w-full max-w-full h-auto py-3xl px-lg">
-        <div class="w-full max-w-full flex flex-col gap-lg">
-            <div class="faq_heading_body flex flex-col gap-3xs text-center">
+    <section class="relative w-full h-auto max-w-full py-3xl px-lg">
+        <div class="flex flex-col w-full max-w-full gap-lg">
+            <div class="flex flex-col text-center faq_heading_body gap-3xs">
                 <h2>These are popular questions and answers</h2>
                 <p>Many new comer ask us about these common question, if there’s no question or answer that we don’t provide, contact us
                 right away and we’ll answer it.</p>
             </div>
-            <div class="faq_accordion flex flex-col gap-sm">
-                <div class="w-full max-w-full h-auto rounded-sm p-2sm bg-softgrey ">
-                    <div class="w-full h-auto flex justify-between">
+            <div class="flex flex-col faq_accordion gap-sm">
+                <div class="w-full h-auto max-w-full rounded-sm p-2sm bg-softgrey ">
+                    <div class="flex justify-between w-full h-auto">
                         <h4>How do I request a shipment?</h4>
                         <button class="btn_icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -256,8 +266,8 @@
                     <p class="mt-sm">You can request a shipment through our website, by contacting our customer service team, or visiting our nearest branch
                     office. Simply provide your shipment details, and we’ll assist you with the booking process.</p>
                 </div>
-                <div class="w-full max-w-full h-auto rounded-sm p-2sm bg-softgrey ">
-                    <div class="w-full h-auto flex justify-between">
+                <div class="w-full h-auto max-w-full rounded-sm p-2sm bg-softgrey ">
+                    <div class="flex justify-between w-full h-auto">
                         <h4>What types of cargo can you handle?</h4>
                         <button class="btn_icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -270,8 +280,8 @@
                         visiting our nearest branch
                         office. Simply provide your shipment details, and we’ll assist you with the booking process.</p>
                 </div>
-                <div class="w-full max-w-full h-auto rounded-sm p-2sm bg-softgrey ">
-                    <div class="w-full h-auto flex justify-between">
+                <div class="w-full h-auto max-w-full rounded-sm p-2sm bg-softgrey ">
+                    <div class="flex justify-between w-full h-auto">
                         <h4>How do I track my shipment?</h4>
                         <button class="btn_icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -284,8 +294,8 @@
                         visiting our nearest branch
                         office. Simply provide your shipment details, and we’ll assist you with the booking process.</p>
                 </div>
-                <div class="w-full max-w-full h-auto rounded-sm p-2sm bg-softgrey ">
-                    <div class="w-full h-auto flex justify-between">
+                <div class="w-full h-auto max-w-full rounded-sm p-2sm bg-softgrey ">
+                    <div class="flex justify-between w-full h-auto">
                         <h4>Do you provide cargo insurance?</h4>
                         <button class="btn_icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -302,18 +312,18 @@
         </div>
     </section>
 
-    <section class="relative w-full max-w-full h-auto py-3xl px-lg">
-        <div class="w-full max-w-full flex flex-col gap-lg">
+    <section class="relative w-full h-auto max-w-full py-3xl px-lg">
+        <div class="flex flex-col w-full max-w-full gap-lg">
             <div class="contactus_box flex items-end gap-[46px]">
                 <div class="contactus_heading2">
                     <h2>We excited to talk with you!</h2>
                 </div>
-                <div class="contactus_body flex flex-col gap-sm">
+                <div class="flex flex-col contactus_body gap-sm">
                     <p>Need assistance with our services? Our team is here to help you every step of the way to find the best shipping
                     solution, reach out to us and we’ll respond promptly.</p>
                     <a href="index.html" class="btn_primary">
                         <span>Reach me</span>
-                        <div class="p-xs rounded-sm bg-white">
+                        <div class="bg-white rounded-sm p-xs">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                 class=" size-[18px] text-purple">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -328,37 +338,37 @@
         </div>
     </section>
 
-    <footer class="w-full max-w-full h-auto flex flex-col gap-1xs px-lg pt-3xl pb-2sm border-t-1 border-stroke">
-        <div class="w-full h-auto flex justify-between pb-1xs">
+    <footer class="flex flex-col w-full h-auto max-w-full gap-1xs px-lg pt-3xl pb-2sm border-t-1 border-stroke">
+        <div class="flex justify-between w-full h-auto pb-1xs">
             <div class="short_desc w-[500px] h-auto">
                 <p class="text-darknight">Let’s work together</p>
                 <p class="mt-3xs">We made for you, from busy ports to distant highways we provide global shipment with deep understanding of supply chains
                 needs.</p>
             </div>
-            <div class="footer_links_block size-auto flex gap-md">
+            <div class="flex footer_links_block size-auto gap-md">
                 <div class="links w-[222px]">
                     <p>Acitivity</p>
                     <div class="flex flex-col gap-2xs mt-3xs">
-                        <a href="#" class="btn_tetiary border-b-0">Home</a>
-                        <a href="#" class="btn_tetiary border-b-0">Why us</a>
-                        <a href="#" class="btn_tetiary border-b-0">Press and media</a>
-                        <a href="#" class="btn_tetiary border-b-0">Career</a>
+                        <a href="#" class="border-b-0 btn_tetiary">Home</a>
+                        <a href="#" class="border-b-0 btn_tetiary">Why us</a>
+                        <a href="#" class="border-b-0 btn_tetiary">Press and media</a>
+                        <a href="#" class="border-b-0 btn_tetiary">Career</a>
                     </div>
                 </div>
                 <div class="links w-[222px]">
                     <p>Services</p>
                     <div class="flex flex-col gap-2xs mt-3xs">
-                        <a href="#" class="btn_tetiary border-b-0">Sea freight</a>
-                        <a href="#" class="btn_tetiary border-b-0">Road freight</a>
-                        <a href="#" class="btn_tetiary border-b-0">Container supplier</a>
+                        <a href="#" class="border-b-0 btn_tetiary">Sea freight</a>
+                        <a href="#" class="border-b-0 btn_tetiary">Road freight</a>
+                        <a href="#" class="border-b-0 btn_tetiary">Container supplier</a>
                     </div>
                 </div>
                 <div class="links w-[222px]">
                     <p>Others</p>
                     <div class="flex flex-col gap-2xs mt-3xs">
-                        <a href="#" class="btn_tetiary border-b-0">Legal</a>
-                        <a href="#" class="btn_tetiary border-b-0">Privacy</a>
-                        <a href="#" class="btn_tetiary border-b-0">Disclaimer</a>
+                        <a href="#" class="border-b-0 btn_tetiary">Legal</a>
+                        <a href="#" class="border-b-0 btn_tetiary">Privacy</a>
+                        <a href="#" class="border-b-0 btn_tetiary">Disclaimer</a>
                     </div>
                 </div>
             </div>
@@ -366,14 +376,14 @@
 
         <div class="w-full h-[235px] flex justify-between py-sm border-t-1 border-stroke">
             <div class="subs_social w-[500px] h-auto">
-                <form class="max-w-full py-xs pr-xs pl-sm bg-canvas block w-full border-1 border-stroke rounded-xl">
-                    <div class="flex rounded-xl overflow-hidden">
+                <form class="block w-full max-w-full py-xs pr-xs pl-sm bg-canvas border-1 border-stroke rounded-xl">
+                    <div class="flex overflow-hidden rounded-xl">
                         <input type="email" id="email" name="email" required
-                            class="flex-1 focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-transparent transition font-main font-normal text-button-all placeholder-darkgrey"
+                            class="flex-1 font-normal transition focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-transparent font-main text-button-all placeholder-darkgrey"
                             placeholder="Subscribe newsletter"/>
                         <button type="submit" class="btn_primary">
                             Subscribe 
-                            <div class="p-xs rounded-sm bg-white">
+                            <div class="bg-white rounded-sm p-xs">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                     class=" size-[18px] text-purple">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -383,7 +393,7 @@
                     </div>
                 </form>
             </div>
-            <div class="footer_address_block size-auto flex gap-md pl-md border-l-1 border-stroke">
+            <div class="flex footer_address_block size-auto gap-md pl-md border-l-1 border-stroke">
                 <div class="address-1 w-[222px] h-full flex flex-col justify-between">
                     <p class="text-darknight">1851-591-0022</p>
                     <div class="flex flex-col gap-2xs mt-3xs">
@@ -401,7 +411,7 @@
             </div>
         </div>
 
-        <div class="w-full h-auto flex justify-between py-3xs border-t-1 border-stroke">
+        <div class="flex justify-between w-full h-auto py-3xs border-t-1 border-stroke">
             <p>This only a design concept for international website</p>
             <p>Copyright 2025</p>
         </div>
@@ -409,5 +419,6 @@
 
 </main>
 <script src="animation.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
 </body>
 </html>

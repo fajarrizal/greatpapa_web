@@ -1,3 +1,63 @@
+// Burger menu toggle
+const menuToggle = document.getElementById('menu_toggle');
+const mainNav = document.getElementById('main_menu');
+if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', function () {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        if (!expanded) {
+            mainNav.classList.remove('invisible', 'opacity-0');
+            mainNav.classList.add('visible', 'opacity-100');
+        } else {
+            mainNav.classList.remove('visible', 'opacity-100');
+            mainNav.classList.add('invisible', 'opacity-0');
+        }
+    });
+
+    // Optional: close menu when clicking outside on mobile
+    document.addEventListener('click', function (event) {
+        if (
+            !menuToggle.contains(event.target) &&
+            !mainNav.contains(event.target) &&
+            window.innerWidth < 1024 &&
+            mainNav.classList.contains('visible')
+        ) {
+            menuToggle.setAttribute('aria-expanded', false);
+            mainNav.classList.remove('visible', 'opacity-100');
+            mainNav.classList.add('invisible', 'opacity-0');
+        }
+    });
+}
+
+// Hide header on scroll down, show on scroll up
+let lastScrollY = window.scrollY;
+let ticking = false;
+const header = document.getElementById('nav-header');
+
+function onScroll() {
+    if (!header) return;
+
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 64) {
+        // Scrolling down
+        header.style.transform = "translateY(-100%)";
+    } else {
+        // Scrolling up
+        header.style.transform = "translateY(0)";
+    }
+    lastScrollY = currentScrollY;
+    ticking = false;
+}
+
+window.addEventListener('scroll', function () {
+    if (!ticking) {
+        window.requestAnimationFrame(onScroll);
+        ticking = true;
+    }
+});
+
+
 // Counting animation
 function animateCount(el, target, duration = 1400, decimals = false, suffix = "") {
     let start = 0;

@@ -86,6 +86,13 @@
 
 @layer components {
 
+ul {
+    font-size: var(--text-header-2xl);
+    line-height: var(--spacing-3xs);
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-medium);
+}
+
 h1 {
     font-family: var(--font-main);
     font-weight: var(--font-weight-semibold);
@@ -205,7 +212,7 @@ p {
     color: var(--color-white);
     background-color: var(--color-purple);
 
-    @apply transition-transform duration-345 ease-out;
+    @apply transition-transform ease-out duration-345;
 
     &:hover {
             @media (hover: hover) {
@@ -228,7 +235,7 @@ p {
     border-width: 2.2px;
     border-color: var(--color-darkgrey);
 
-    @apply transition-transform duration-345 ease-out;
+    @apply transition-transform ease-out duration-345;
 
     &:hover {
         @media (hover: hover) {
@@ -247,7 +254,7 @@ p {
     border-bottom-width: 1.6px;
     border-color: var(--color-darknight);
     
-    @apply transition-transform duration-345 ease-out;
+    @apply transition-transform ease-out duration-345;
 
     &:hover {
         @media (hover: hover) {
@@ -256,32 +263,22 @@ p {
     }
 }
 
-.nav-header{
+/* .nav-header{
     height: auto;
     width: 100%;
     max-width: 100%;
     z-index: 999;
     position: fixed;
-}
+} */
 
-.nav_contain{
+/* .nav_contain{
     display: flex;
     align-items: center;
-}
-
-.nav_menu {
-    margin: auto;
-    display: flex;
-    gap: 32px;
-    font-size: var(--text-header-2xl);
-    line-height: var(--spacing-3xs);
-    font-family: var(--font-main);
-    font-weight: var(--font-weight-medium);
-    }
+} */
 
 .nav-link {
     @apply text-darkgrey;
-    @apply transition-colors duration-380 ease-out;
+    @apply transition-colors ease-out duration-380;
 
         &:hover {
                 @media (hover: hover) {
@@ -303,8 +300,8 @@ p {
 
 .client_svg{
     opacity: 65%;
-    @apply transition-opacity duration-345 ease-out;
-    @apply transition-transform duration-345 ease-out;
+    @apply transition-opacity ease-out duration-345;
+    @apply transition-transform ease-out duration-345;
     
         &:hover {
             @media (hover: hover) {
