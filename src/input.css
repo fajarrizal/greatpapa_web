@@ -27,6 +27,7 @@
     --text-*: initial;
     --text-h1-2xl: 4.75rem;
     --text-h1-xl: 4.5rem;
+    --text-h1-md: 4.1rem;
     --text-h1-xs: 3.25rem;
 
     --text-h2-2xl: 4rem;
@@ -48,6 +49,7 @@
     --text-button-all: 0.90rem;
 
     --text-header-2xl: 0.87rem;
+    --text-header-3xl: 2rem;
 
 
     --color-*: initial;
@@ -145,6 +147,11 @@ p {
     @apply text-body-xs leading-[23.7px];
 }
 
+ul {
+    font-size: var(--text-header-3xl);
+    line-height: var(--spacing-2sm);
+}
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -165,7 +172,27 @@ h4 {
     @apply text-h4-xl leading-[37px] tracking-[-1px];
 }
 
-p{
+p {
+    @apply text-body-xl leading-[24px];
+}
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+h1 {
+    @apply text-h1-xl leading-[90px] tracking-[-2px];
+}
+h2 {
+    @apply text-h2-xl leading-[74px] tracking-[-2px];
+}
+h3 {
+    @apply text-h3-xl leading-[45px] tracking-[-1px];
+}
+h4 {
+    @apply text-h4-xl leading-[37px] tracking-[-1px];
+}
+p {
     @apply text-body-xl leading-[24px];
 }
 
