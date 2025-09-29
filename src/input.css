@@ -89,8 +89,6 @@
 @layer components {
 
 ul {
-    font-size: var(--text-header-2xl);
-    line-height: var(--spacing-3xs);
     font-family: var(--font-main);
     font-weight: var(--font-weight-medium);
 }
@@ -145,11 +143,6 @@ h4 {
 
 p {
     @apply text-body-xs leading-[23.7px];
-}
-
-ul {
-    font-size: var(--text-header-3xl);
-    line-height: var(--spacing-2sm);
 }
 
 }

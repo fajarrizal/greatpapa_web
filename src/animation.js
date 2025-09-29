@@ -29,6 +29,7 @@ if (menuToggle && mainNav) {
     });
 }
 
+
 // Hide header on scroll down, show on scroll up
 let lastScrollY = window.scrollY;
 let ticking = false;
