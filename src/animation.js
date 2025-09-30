@@ -99,3 +99,51 @@ if (section) {
     }, { threshold: 0.2 });
     observer.observe(section);
 }
+
+// Accordion
+document.addEventListener("DOMContentLoaded", function () {
+    const toggles = document.querySelectorAll('.accordion-toggle');
+    toggles.forEach((toggle, idx) => {
+        toggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const item = toggle.closest('.accordion-item');
+            const content = item.querySelector('.accordion-content');
+            const icon = toggle.querySelector('svg');
+
+            // Close all other accordions (classic style)
+            document.querySelectorAll('.accordion-content').forEach((otherContent, i) => {
+                if (otherContent !== content) {
+                    otherContent.style.maxHeight = null;
+                    otherContent.classList.remove('open');
+                    // Remove active styles
+                    const otherBtn = document.querySelectorAll('.accordion-toggle')[i];
+                    const otherIcon = otherBtn.querySelector('svg');
+                    otherBtn.classList.remove('bg-purple');
+                    otherBtn.classList.add('bg-softgrey');
+                    otherIcon.classList.remove('text-white');
+                    otherIcon.classList.add('text-darkgrey');
+                    if (otherIcon) otherIcon.style.transform = '';
+                }
+            });
+
+            // Toggle current accordion
+            if (content.classList.contains('open')) {
+                content.style.maxHeight = null;
+                content.classList.remove('open');
+                toggle.classList.remove('bg-purple');
+                toggle.classList.add('bg-softgrey');
+                icon.classList.remove('text-white');
+                icon.classList.add('text-darkgrey');
+                if (icon) icon.style.transform = '';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.classList.add('open');
+                toggle.classList.remove('bg-softgrey');
+                toggle.classList.add('bg-purple');
+                icon.classList.remove('text-darkgrey');
+                icon.classList.add('text-white');
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            }
+        });
+    });
+});

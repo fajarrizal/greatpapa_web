@@ -303,61 +303,72 @@
                 <p class="mt-3xs">Many new comer ask us about these common question, if there’s no question or answer that we don’t provide, contact us
                 right away and we’ll answer it.</p>
             </div>
-            <div class="flex flex-col w-full 2xl:w-[1028px] lg:w-[882px] md:w-[725px] h-auto mx-auto gap-sm lg:gap-2sm">
-                <div class="w-full h-auto max-w-full rounded-sm p-sm lg:p-2sm bg-softgrey ">
-                    <div class="flex justify-between w-full h-auto">
+            <div class="flex flex-col w-full 2xl:w-[1028px] lg:w-[882px] md:w-[725px] h-auto mx-auto gap-sm lg:gap-2sm"
+                id="accordion">
+                <div class="w-full h-auto max-w-full rounded-sm accordion-item p-sm lg:p-2sm bg-softgrey">
+                    <div class="flex self-center justify-between w-full h-auto cursor-pointer accordion-header">
                         <h4>How do I request a shipment?</h4>
-                        <button class="btn_icon">
+                        <button class="btn_icon accordion-toggle" aria-label="Toggle accordion">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                class="size-sm">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+                                class="transition-transform duration-200 size-sm">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
                             </svg>
                         </button>
-                    </div> 
-                    <p class="mt-sm">You can request a shipment through our website, by contacting our customer service team, or visiting our nearest branch
-                    office. Simply provide your shipment details, and we’ll assist you with the booking process.</p>
+                    </div>
+                    <div class="overflow-hidden transition-all duration-300 accordion-content mt-sm max-h-0">
+                        <p>Requesting a shipment with us is simple. You can fill out our online booking form, contact our customer service team
+                        directly, or email us with your shipment details. Once we receive your request, our team will guide you through the
+                        process, confirm the necessary documentation, and arrange the most efficient shipping solution for your needs.</p>
+                    </div>
                 </div>
-                <div class="w-full h-auto max-w-full rounded-sm p-sm lg:p-2sm bg-softgrey ">
-                    <div class="flex justify-between w-full h-auto">
+                <div class="w-full h-auto max-w-full rounded-sm accordion-item p-sm lg:p-2sm bg-softgrey">
+                    <div class="flex justify-between w-full h-auto cursor-pointer accordion-header">
                         <h4>What types of cargo can you handle?</h4>
-                        <button class="btn_icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                class="size-sm">
+                        <button class="btn_icon accordion-toggle" aria-label="Toggle accordion">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="transition-transform duration-200 size-sm">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
                             </svg>
                         </button>
                     </div>
-                    <p class="mt-sm">You can request a shipment through our website, by contacting our customer service team, or
-                        visiting our nearest branch
-                        office. Simply provide your shipment details, and we’ll assist you with the booking process.</p>
+                    <div class="overflow-hidden transition-all duration-300 accordion-content mt-sm max-h-0">
+                        <p>We handle a wide range of cargo, including general goods, perishable items, oversized equipment, industrial materials,
+                        and more. Our team is experienced in managing both domestic and international shipments, ensuring that your cargo is
+                        transported safely and in compliance with all regulations. If you have special requirements, we can customize solutions
+                        to suit your cargo type.</p>
+                    </div>
                 </div>
-                <div class="w-full h-auto max-w-full rounded-sm p-sm lg:p-2sm bg-softgrey ">
-                    <div class="flex justify-between w-full h-auto">
+                <div class="w-full h-auto max-w-full rounded-sm accordion-item p-sm lg:p-2sm bg-softgrey">
+                    <div class="flex justify-between w-full h-auto cursor-pointer accordion-header">
                         <h4>How do I track my shipment?</h4>
-                        <button class="btn_icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                class="size-sm">
+                        <button class="btn_icon accordion-toggle" aria-label="Toggle accordion">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="transition-transform duration-200 size-sm">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
                             </svg>
                         </button>
                     </div>
-                    <p class="mt-sm">You can request a shipment through our website, by contacting our customer service team, or
-                        visiting our nearest branch
-                        office. Simply provide your shipment details, and we’ll assist you with the booking process.</p>
+                    <div class="overflow-hidden transition-all duration-300 accordion-content mt-sm max-h-0">
+                        <p>You can easily track your shipment through our online tracking system using your unique reference number. Real-time
+                        updates will allow you to monitor the status, location, and estimated delivery time of your cargo. For additional
+                        support, our customer service team is available to provide tracking information and assistance whenever you need it.</p>
+                    </div>
                 </div>
-                <div class="w-full h-auto max-w-full rounded-sm p-sm lg:p-2sm bg-softgrey ">
-                    <div class="flex justify-between w-full h-auto">
+                <div class="w-full h-auto max-w-full rounded-sm accordion-item p-sm lg:p-2sm bg-softgrey">
+                    <div class="flex justify-between w-full h-auto cursor-pointer accordion-header">
                         <h4>Do you provide cargo insurance?</h4>
-                        <button class="btn_icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                class="size-sm">
+                        <button class="btn_icon accordion-toggle" aria-label="Toggle accordion">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="transition-transform duration-200 size-sm">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
                             </svg>
                         </button>
                     </div>
-                    <p class="mt-sm">You can request a shipment through our website, by contacting our customer service team, or
-                        visiting our nearest branch
-                        office. Simply provide your shipment details, and we’ll assist you with the booking process.</p>
+                    <div class="overflow-hidden transition-all duration-300 accordion-content mt-sm max-h-0">
+                        <p>Yes, we offer cargo insurance to give you peace of mind throughout the shipping process. Our insurance options cover
+                        various risks, including loss, damage, or theft during transit. We recommend insuring your shipment to ensure full
+                        protection, and our team can help you choose the best coverage for your specific cargo.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -506,7 +517,10 @@
     </footer>
 
 </main>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
+<script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
 <script src="animation.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
 </body>
 </html>
