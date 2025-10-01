@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="scroll-smooth">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -136,8 +136,8 @@
 
     <section class="w-full h-auto max-w-full pt-lg 2xl:pt-4xl lg:pt-3xl md:pt-xl">
         <div class="container_content flex flex-col gap-[40px] lg:gap-[119px]">
-            <div class="w-full 2xl:w-[1421px] h-auto pl-sm 2xl:pl-lg lg:pl-md md:pl-3sm pr-sm md:pr-3sm lg:pr-[22px]">
-                <h2>We made for you, from busy ports to distant highways we provide global shipment with deep understanding of supply chains
+            <div class="w-full h-auto 2xl:w-[1421px] pl-sm 2xl:pl-lg lg:pl-md md:pl-3sm pr-sm md:pr-3sm lg:pr-[22px]">
+                <h2 class="smooth-text">We made for you, from busy ports to distant highways we provide global shipment with deep understanding of supply chains
                 needs.</h2>
             </div>
             <div id="milestones" class="w-full h-auto grid grid-rows-3 xs:grid-rows-1 grid-cols-1 xs:grid-cols-3 border-t-[1.6px] divide-y-[1.6px] xs:divide-x-[1.6px] divide-stroke border-stroke">
@@ -165,33 +165,66 @@
                 <img class="object-cover object-right size-full xs:object-fill xs:object-center" src="/asset/img_section_illustration_lg.jpg" alt="shipment_illustration">
             </div>
             <div class="w-full h-auto flex flex-col md:flex-row items-end py-xs px-sm 2xl:px-lg lg:px-md md:px-3sm gap-[28px] lg:gap-[46px] md:gap-[32px] ">
-                <div class="flex flex-col 2xl:w-3/5 md:w-2/3 md:flex-row gap-sm xl:gap-3sm md:gap-2sm ">
-                    <div class="w-[138px] lg:w-1/5 3xl:h-auto lg:h-[165px] hidden lg:inline-block">
-                        <img class="object-fill size-full rounded-tr-xl rounded-br-xs rounded-tl-xs" src="/asset/img_client_potrait.jpg" alt="client_potrait">
+                <div id="review-box" class="w-full 2xl:w-3/5 md:w-2/3 h-auto relative overflow-hidden">
+                    <div class="review-item block inset-0 transition-opacity duration-300">
+                        <div class="flex flex-col md:flex-row gap-sm xl:gap-3sm md:gap-2sm ">
+                            <div class="w-[138px] lg:w-1/5 3xl:h-auto lg:h-[165px] md:hidden xss:inline-block lg:inline-block">
+                                <img class="object-fill size-full rounded-tr-xl rounded-br-xs rounded-tl-xs" src="/asset/img_client_potrait1.jpg"
+                                    alt="client_potrait">
+                            </div>
+                            <div class="flex flex-col w-full h-auto lg:w-4/5 gap-1xs">
+                                <p><span class="text-darknight">Aaron Ricardson</span><span>,</span> <span>Warehouse Senior Supervisor at Mohawk
+                                        Industries</span></p>
+                                <h4>“GreatPapa is exceptional, safely manage our cargo and deeply understand our supply chains, Weather in sea
+                                    or road they
+                                    always taking good care your cargo, extraordinary services I would say.“</h4>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-col w-full h-auto lg:w-4/5 gap-1xs">
-                        <p><span class="text-darknight">Aaron Ricardson</span><span>,</span> <span>Warehouse Senior Supervisor at Mohawk Industries</span></p>
-                        <h4>“GreatPapa is exceptional, safely manage our cargo and deeply understand our supply chains, Weather in sea or road they
-                        always taking good care your cargo, extraordinary services I would say.“</h4>
+                    <div class="review-item absolute inset-0 transition-opacity duration-300">
+                        <div class="flex flex-col md:flex-row gap-sm xl:gap-3sm md:gap-2sm ">
+                            <div class="w-[138px] lg:w-1/5 3xl:h-auto lg:h-[165px] md:hidden xss:inline-block lg:inline-block">
+                                <img class="object-fill size-full rounded-tr-xl rounded-br-xs rounded-tl-xs" src="/asset/img_client_potrait2.jpg"
+                                    alt="client_potrait">
+                            </div>
+                            <div class="flex flex-col w-full h-auto lg:w-4/5 gap-1xs">
+                                <p><span class="text-darknight">Maria Lopez</span><span>,</span> <span>Logistics Manager at Global
+                                        Shipping</span></p>
+                                <h4>“Excellent service, timely delivery, and professional staff. Highly recommend GreatPapa for logistics
+                                    solutions!”</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-item absolute inset-0 transition-opacity duration-300">
+                        <div class="flex flex-col md:flex-row gap-sm xl:gap-3sm md:gap-2sm ">
+                            <div class="w-[138px] lg:w-1/5 3xl:h-auto lg:h-[165px] md:hidden xss:inline-block lg:inline-block">
+                                <img class="object-fill size-full rounded-tr-xl rounded-br-xs rounded-tl-xs" src="/asset/img_client_potrait3.jpg"
+                                    alt="client_potrait">
+                            </div>
+                            <div class="flex flex-col w-full h-auto lg:w-4/5 gap-1xs">
+                                <p><span class="text-darknight">John Khrascynh</span><span>,</span> <span>CEO at Tech Innovators</span></p>
+                                <h4>Amazing experience, great support, and reliable logistics partner. Will work again!”</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="w-full 2xl:w-2/5 md:w-1/3 flex gap-3xs h-[50px]">
-                    <a href="index.html" class="btn_icon">
+                    <button id="prevBtn" href="index.html" class="btn_icon">
                         <div class="rounded-sm p-xs">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                 class="size-[18px]">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                             </svg>
                         </div>
-                    </a>
-                    <a href="index.html" class="btn_icon">
+                    </button>
+                    <button id="nextBtn" href="index.html" class="btn_icon">
                         <div class="rounded-sm p-xs">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                 class=" size-[18px]">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                             </svg>
                         </div>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -306,7 +339,7 @@
             <div class="flex flex-col w-full 2xl:w-[1028px] lg:w-[882px] md:w-[725px] h-auto mx-auto gap-sm lg:gap-2sm"
                 id="accordion">
                 <div class="w-full h-auto max-w-full rounded-sm accordion-item p-sm lg:p-2sm bg-softgrey">
-                    <div class="flex self-center justify-between w-full h-auto cursor-pointer accordion-header">
+                    <div class="flex justify-between w-full h-auto cursor-pointer accordion-header">
                         <h4>How do I request a shipment?</h4>
                         <button class="btn_icon accordion-toggle" aria-label="Toggle accordion">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"

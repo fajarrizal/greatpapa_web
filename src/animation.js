@@ -1,3 +1,58 @@
+
+gsap.registerPlugin(ScrollTrigger)
+
+const Splittext = document.querySelectorAll('.smooth-text')
+
+ScrollTrigger.matchMedia({
+    // Desktop and above
+    "(min-width: 1280px)": function () {
+        Splittext.forEach((char, i) => {
+            // Store reference for cleanup if needed
+            const text = new SplitType(char, { types: 'words' });
+            char._splitType = text; // Store for cleanup
+            char._gsapAnim = gsap.from(text.words, {
+                scrollTrigger: {
+                    trigger: char,
+                    start: 'top 80%',
+                    end: 'top 20%',
+                    scrub: true,
+                    markers: false
+                },
+                opacity: 0.2,
+                stagger: 0.1
+            });
+        });
+    },
+
+    // Below desktop
+    "(max-width: 1279px)": function () {
+        // Optional: Cleanup SplitType and GSAP on small screens
+        Splittext.forEach(char => {
+            if (char._gsapAnim) {
+                char._gsapAnim.kill();
+                char._gsapAnim = null;
+            }
+            if (char._splitType) {
+                char._splitType.revert();
+                char._splitType = null;
+            }
+        });
+    }
+});
+
+
+// smooth scrolling
+const lenis = new Lenis()
+lenis.on('scroll', (e) => {
+    console.log(e)
+})
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
+requestAnimationFrame(raf)
+
+
 // Burger menu toggle
 const menuToggle = document.getElementById('menu_toggle');
 const mainNav = document.getElementById('main_menu');
@@ -99,6 +154,35 @@ if (section) {
     }, { threshold: 0.2 });
     observer.observe(section);
 }
+
+// client review 
+document.addEventListener('DOMContentLoaded', () => {
+    const reviews = document.querySelectorAll('.review-item');
+    let currentIndex = 0;
+
+    const totalReviews = reviews.length;
+
+    const showReview = (index) => {
+        reviews.forEach((review, i) => {
+            review.style.opacity = i === index ? '1' : '0';
+            review.style.pointerEvents = i === index ? 'auto' : 'none';
+        });
+    };
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalReviews) % totalReviews;
+        showReview(currentIndex);
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalReviews;
+        showReview(currentIndex);
+    });
+
+    // Initialize first review
+    showReview(currentIndex);
+});
+
 
 // Accordion
 document.addEventListener("DOMContentLoaded", function () {
